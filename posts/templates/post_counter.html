@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts Counter</title>
+    <style>
+        .counter {
+            font-size: 20px;
+            /* Додати інші стилі за бажанням */
+        }
+        .low {
+            color: red;
+        }
+        .medium {
+            color: orange;
+        }
+        .high {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="counter {% if posts_count < 10 %}low{% elif posts_count < 20 %}medium{% else %}high{% endif %}">Total Posts: {{ posts_count }}</h1>
+</body>
+</html>
+
